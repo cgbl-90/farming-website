@@ -1,7 +1,8 @@
 :root {
-    --main--clr: #44723c;
-    --dark--clr: #204515;
-    --light--clr: #95ce8b;
+    --main--clr: rgba(68, 114, 60, 1);
+    --dark--clr: rgba(32, 69, 21, 1);
+    --light--clr: rgba(149, 206, 139, 1);
+    ;
 }
 
 body {
@@ -11,23 +12,205 @@ body {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6,
+p,
+button {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 1rem;
+}
+
+section {
+    height: 100vh;
+    text-align: center;
+}
+
 /* HEADER */
 
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 150px;
+    justify-content: space-evenly;
+    place-items: center;
+    height: fit-content;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+    z-index: 2;
 }
 
+nav,
 ul {
     list-style: none;
 }
 
 li {
-    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+.nav--item {
+    display: inline;
+    padding-left: 100px;
+    transition: .2s ease-in;
+}
+
+.nav--item:hover,
+.nav--item:focus {
+    border-bottom: 4px solid var(--light--clr);
+    color: var(--light--clr);
 }
 
 .logo {
-    padding-left: 100px;
+    padding-left: 50px;
+    max-width: 150px;
+}
+
+/* HERO */
+
+.hero {
+    background-image: url(./hero.jpg);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+}
+
+.hero--title {
+    margin: 7rem auto 3rem;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+}
+
+.hero--body {
+    margin: 0 auto;
+    max-width: 60ch;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+button {
+    width: fit-content;
+    padding: 15px 35px;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main--clr);
+    font-size: 22px;
+    letter-spacing: .3rem;
+    color: white;
+    font-weight: 400;
+    transition: .3s ease-in;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--dark--clr);
+    transform: scale(1.03);
+}
+
+/* TOURS & ACTIVITIES */
+
+.tittles {
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin: 50px 0px -50px;
+    text-align: center;
+}
+
+.subtittles {
+    text-align: center;
+}
+
+.tours {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    place-items: center;
+}
+
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: var(--light--clr);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8)
+}
+
+.card img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 200ms ease-in-out;
+}
+
+.card div {
+    margin: 10px 20px;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    width: 100%;
+    background-image: url(./onions.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+}
+
+.products-flex {
+    display: flex;
+    flex-flow: row wrap;
+    place-items: center;
+    margin: 5rem auto;
+}
+
+.products .card {
+    height: 300px;
+    width: 300px;
+    filter: none;
+    z-index: 1;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    height: fit-content;
+    background-color: #191919;
+    color: white;
+    padding: 30px;
+}
+
+.website--list {
+    text-align: right;
+}
+
+.footer-social {
+    font-weight: 100;
 }
