@@ -20,7 +20,10 @@ h5,
 h5,
 h6,
 p,
-button {
+button,
+a,
+label,
+input {
     font-family: 'Lato', sans-serif;
 }
 
@@ -140,9 +143,13 @@ button:focus {
 
 .tours {
     width: 100%;
+}
+
+.flex {
     display: flex;
     flex-flow: row wrap;
     place-items: center;
+    justify-content: space-around;
 }
 
 .card {
@@ -180,18 +187,20 @@ button:focus {
     z-index: -1;
 }
 
-.products-flex {
-    display: flex;
-    flex-flow: row wrap;
-    place-items: center;
-    margin: 5rem auto;
-}
-
 .products .card {
     height: 300px;
     width: 300px;
     filter: none;
     z-index: 1;
+}
+
+/* ARTICLE */
+
+.article {
+    padding: 10px 5px;
+    background-color: var(--light--clr);
+    margin: 10px;
+    max-width: 320px;
 }
 
 /* FOOTER */
@@ -213,4 +222,23 @@ footer {
 
 .footer-social {
     font-weight: 100;
+}
+
+/* Links */
+
+a {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+a:after {
+    content: "->";
+}
+
+a:focus,
+a:hover,
+a:focus:after,
+a:hover:after {
+    content: "-->>";
+    color: var(--dark--clr);
 }
